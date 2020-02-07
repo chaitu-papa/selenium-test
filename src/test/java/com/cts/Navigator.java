@@ -12,9 +12,9 @@ public class Navigator {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//driver//chromedriver.exe");
 		
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--start-maximized");
-		capabilities.setCapability(ChromeOptions.CAPABILITY, options);	
+		//ChromeOptions options = new ChromeOptions();
+		//options.addArguments("--start-maximized");
+		//capabilities.setCapability(ChromeOptions.CAPABILITY, options);	
 		driver = new ChromeDriver(capabilities);
 		driver.get("http://sampleapp.tricentis.com/101/app.php");	
 		System.out.println("Opened the page --> http://sampleapp.tricentis.com/101/app.php");
