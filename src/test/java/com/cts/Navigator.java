@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;	
 
 public class Navigator {
 	static WebDriver driver;
@@ -11,11 +12,12 @@ public class Navigator {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//driver//chromedriver.exe");
 		
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		//DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		//ChromeOptions options = new ChromeOptions();
 		//options.addArguments("--start-maximized");
 		//capabilities.setCapability(ChromeOptions.CAPABILITY, options);	
-		driver = new ChromeDriver(capabilities);
+		//driver = new ChromeDriver(capabilities);
+		WebDriver driver = new HtmlUnitDriver();
 		driver.get("http://sampleapp.tricentis.com/101/app.php");	
 		System.out.println("Opened the page --> http://sampleapp.tricentis.com/101/app.php");
 		Thread.sleep(2000);
