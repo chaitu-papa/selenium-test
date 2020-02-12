@@ -41,7 +41,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>Test</mainClass>
+							<mainClass>Test.Executor.class</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
